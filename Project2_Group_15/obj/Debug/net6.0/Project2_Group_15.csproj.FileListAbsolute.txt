@@ -1,0 +1,15 @@
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\bin\Debug\net6.0\Project2_Group_15.exe
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\bin\Debug\net6.0\Project2_Group_15.deps.json
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\bin\Debug\net6.0\Project2_Group_15.runtimeconfig.json
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\bin\Debug\net6.0\Project2_Group_15.dll
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\bin\Debug\net6.0\Project2_Group_15.pdb
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.csproj.AssemblyReference.cache
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.GeneratedMSBuildEditorConfig.editorconfig
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.AssemblyInfoInputs.cache
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.AssemblyInfo.cs
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.csproj.CoreCompileInputs.cache
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.dll
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\refint\Project2_Group_15.dll
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.pdb
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\Project2_Group_15.genruntimeconfig.cache
+C:\CPA3\Level 5\CSHARPADV_INFO5101\ADV_CSHARP_P2\Project2_Group_15\obj\Debug\net6.0\ref\Project2_Group_15.dll

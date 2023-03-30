@@ -12,7 +12,30 @@ namespace Project2_Group_15 {
         // (a-b) *c is represented as *-abc
         public List<string> ConvertToPrefix(List<string> InFix) { 
             List<string> PreFix = new List<string>();
-            /*
+            /*foreach (string ex in InFix) {
+                char[] reverseEx = ex.Reverse();
+
+                string prefixExp = "";
+                Stack<char> operatorStack = new();
+
+                for (int i = 0; i < reverseEx.Count(); i++) {
+                     char c = reverseEx[i];
+                // if operand add to prefix expression
+                    if(Char.IsDigit(c)) {
+                        prefixExp += c;
+                    }
+                // if operator and operator stack empty,
+                // push to operator stack
+                    else if (operatorStack.Count <= 0) {
+                        operatorStack.Push(c);
+                    }
+                // operator stack is not empty
+                    else {
+
+                    }
+                }
+            }*/
+            
             foreach (string expression in InFix) {
                 // convert expression to prefix and add to convertedList
                 
@@ -26,9 +49,9 @@ namespace Project2_Group_15 {
 
                     if (c == '(') {
                         operators.Push(c);
-                    } else if (c == ')') {
+                    } else if (c == '(') {
                         while (operators.Count > 0 &&
-                        operators.Peek() != '(') {
+                        operators.Peek() != ')') {
 
                             string operand1 = operands.Peek();
                             operands.Pop();
@@ -42,7 +65,7 @@ namespace Project2_Group_15 {
                             // Add operands and operator
                             // in form operator +
                             // operand1 + operand2.
-                            string tmp = op + operand2 + operand1;
+                            string tmp = op + operand1 + operand2;
                             operands.Push(tmp);
                         }
                         operators.Push(c);
@@ -83,7 +106,7 @@ namespace Project2_Group_15 {
 
                     PreFix.Add(operands.Peek());
                 }
-            }*/
+            }
 
             return PreFix;
         }

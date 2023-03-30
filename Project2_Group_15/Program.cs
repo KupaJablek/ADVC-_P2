@@ -13,7 +13,7 @@
             Postfix postfix = new();
             Prefix prefix = new();
 
-            foreach (string exp in postfix.ConvertToPostfix(firstList)) {
+            foreach (string exp in prefix.ConvertToPrefix(firstList)) {
                 Console.WriteLine(exp);
             }
         }

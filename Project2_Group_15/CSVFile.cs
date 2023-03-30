@@ -10,9 +10,8 @@ namespace Project2_Group_15 {
         // dump contents of csv into list
         public List<string> CSVDeserialize() {
             List<string> inFix = new List<string>();
-            string? path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
-            using (StreamReader sr = new StreamReader(path + "\\Data\\" + "Project 2_INFO_5101.csv")) {
+            using (StreamReader sr = new StreamReader("../../../Data/" + "Project 2_INFO_5101.csv")) {
 
                 string line = sr.ReadLine(); // skip header
                 while ((line = sr.ReadLine()) != null) {

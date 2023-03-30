@@ -12,29 +12,6 @@ namespace Project2_Group_15 {
         // (a-b) *c is represented as *-abc
         public List<string> ConvertToPrefix(List<string> InFix) { 
             List<string> PreFix = new List<string>();
-            /*foreach (string ex in InFix) {
-                char[] reverseEx = ex.Reverse();
-
-                string prefixExp = "";
-                Stack<char> operatorStack = new();
-
-                for (int i = 0; i < reverseEx.Count(); i++) {
-                     char c = reverseEx[i];
-                // if operand add to prefix expression
-                    if(Char.IsDigit(c)) {
-                        prefixExp += c;
-                    }
-                // if operator and operator stack empty,
-                // push to operator stack
-                    else if (operatorStack.Count <= 0) {
-                        operatorStack.Push(c);
-                    }
-                // operator stack is not empty
-                    else {
-
-                    }
-                }
-            }*/
             
             foreach (string expression in InFix) {
                 // convert expression to prefix and add to convertedList
@@ -47,67 +24,55 @@ namespace Project2_Group_15 {
                 for (int i = 0; i < exp.Length; i++) {
                     char c = exp[i];
 
-                    if (c == '(') {
+                    if (c == ')') {
                         operators.Push(c);
                     } else if (c == '(') {
                         while (operators.Count > 0 &&
                         operators.Peek() != ')') {
 
-                            string operand1 = operands.Peek();
-                            operands.Pop();
+                            string operand1 = operands.Pop();
 
-                            string operand2 = operands.Peek();
-                            operands.Pop();
+                            string operand2 = operands.Pop();
 
-                            char op = operators.Peek();
-                            operators.Pop();
+                            char op = operators.Pop();
 
-                            // Add operands and operator
-                            // in form operator +
-                            // operand1 + operand2.
                             string tmp = op + operand1 + operand2;
                             operands.Push(tmp);
                         }
-                        operators.Push(c);
+                        operators.Pop();
                     } else if (Char.IsDigit(c)) {
-                        operands.Push(c + "");
+                        operands.Push(c.ToString());
                     } else {
-                        while (operators.Count > 0 &&
-                            Util.GetOperandPriority(operators.Peek()) <=
-                            Util.GetOperandPriority(c)) {
-                            string op1 = operands.Peek();
-                            operands.Pop();
+                        while (operators.Count > 0 && Util.GetOperandPriority(c) <=
+                            Util.GetOperandPriority(operators.Peek()))
+                            {
+                            string op1 = operands.Pop();
 
-                            string op2 = operands.Peek();
-                            operands.Pop();
+                            string op2 = operands.Pop();
 
-                            char op = operators.Peek();
-                            operators.Pop();
+                            char op = operators.Pop();
 
-                            string tmp = op + op2 + op1;
+                            string tmp = op + op1 + op2;
                             operands.Push(tmp);
                         }
                         operators.Push(c);
                     }
-
-                    while (operators.Count() > 0) {
-                        string op1 = operands.Peek();
-                        operands.Pop();
-
-                        string op2 = operands.Peek();
-                        operands.Pop();
-
-                        char op = operators.Peek();
-                        operators.Pop();
-
-                        string tmp = op + op2 + op1;
-                        operands.Push(tmp);
-                    }
-
-                    PreFix.Add(operands.Peek());
                 }
-            }
 
+                while (operators.Count() > 0)
+                {
+                    string op1 = operands.Pop();
+
+                    string op2 = operands.Pop();
+
+                    char op = operators.Pop();
+
+                    string tmp = op + op1 + op2;
+                    operands.Push(tmp);
+                }
+
+                PreFix.Add(operands.Peek());
+            }
             return PreFix;
         }
     }

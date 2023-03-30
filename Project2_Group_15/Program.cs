@@ -6,6 +6,7 @@
             Postfix postfix = new();
             Prefix prefix = new();
             ExpressionEvaluation expEval = new();
+            CompareExpressions compExp = new();
 
             List<string> firstList = csv.CSVDeserialize();
 
@@ -41,7 +42,7 @@
 
             for (int i = 0; i < firstList.Count(); i++) {
 
-                string match = postfixResults[i].CompareTo(prefixResults[i]) == 1 ? "True" : "False"; 
+                string match = (compExp.Compare(Double.Parse(postfixResults[i]), Double.Parse(prefixResults[i])) == 0 ? "True" : "False"); 
 
                 Console.WriteLine("|{0, 5}|{1,21}|{2,19}|{3,19}|{4,11}|{5,11}|{6,6}|", 
                     i + 1, firstList[i], postfixList[i], prefixList[i],

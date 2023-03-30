@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project2_Group_15 {
-    public class CompareExpressions : IComparer<int> {
+    public class CompareExpressions : IComparer<double> {
         // compare the results from conversion process
-        public int Compare(int result1, int result2) {
+        public int Compare(double result1, double result2) {
             return result1.CompareTo(result2);
         }
     }

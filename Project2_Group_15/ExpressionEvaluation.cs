@@ -16,8 +16,6 @@ namespace Project2_Group_15 {
 
         public string EvaluatePrefix(string expression) {
 
-            Console.WriteLine(expression);
-
             Stack<string> operands = new();
 
             for (int i = expression.Length - 1; i >= 0; i--)

@@ -13,8 +13,15 @@
             Postfix postfix = new();
             Prefix prefix = new();
 
-            foreach (string exp in prefix.ConvertToPrefix(firstList)) {
-                Console.WriteLine(exp);
+            ExpressionEvaluation expEval = new();
+
+            //foreach (string exp in postfix.ConvertToPostfix(firstList)) {
+            //    Console.WriteLine(expEval.EvaluatePostfix(exp));
+            //}
+
+            foreach (string exp in prefix.ConvertToPrefix(firstList))
+            {
+                Console.WriteLine(expEval.EvaluatePrefix(exp));
             }
         }
     }

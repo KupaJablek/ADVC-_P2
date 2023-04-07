@@ -1,21 +1,16 @@
 ﻿using Project2_Group_15.ConversionsProcesses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project2_Group_15 {
-    internal class Postfix {
+    public class Postfix {
         // will contain conversion process from indix to postfix notation
         // (a-b) *c is represented as ab-c*
         public List<string> ConvertToPostfix(List<string> InFix) {
-            List<string> PostFix = new List<string>();
+            List<string> PostFix = new();
 
             foreach (string expression in InFix) {
-                // convert expression to prefix and add to convertedList
+                // convert expression to postfix and add to convertedList
 
-                Stack<char> expStack = new Stack<char>();
+                Stack<char> expStack = new();
 
                 string output = "";
 

@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Xml;
 
+
 namespace Project2_Group_15 {
     public class Program { 
         public static void Main(string[] args) {
@@ -13,7 +14,6 @@ namespace Project2_Group_15 {
             CompareExpressions compExp = new();
 
             List<string> firstList = csv.CSVDeserialize();
-
 
             // converted expression lists
             List<string> postfixList = postfix.ConvertToPostfix(firstList);
@@ -81,6 +81,32 @@ namespace Project2_Group_15 {
                 writer.Flush();
                 writer.Close();
             }
+
+            Console.WriteLine("Would you like to open the file in a browser (yes/no)?");
+            var input = Console.ReadLine();
+            while(input != "yes" && input != "no") {
+
+                Console.WriteLine("Invalid entry enter yes or no");
+                input = Console.ReadLine();
+            
+            }
+            
+            if (input == "yes")
+            {
+                string filePath = "../../../Data/ExpressionResults.xml";
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c start \"\" \"{filePath}\"",
+                    WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden,
+                    CreateNoWindow = true,
+                    UseShellExecute = false
+                });
+            }
+            
+
+            //else exit
+            
         }
 
         public static string Match(string first, string second) {

@@ -8,25 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\flibb\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\taylo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CPA3\\Level 5\\CSHARPADV_INFO5101\\ADV_CSHARP_P2\\Project2_Group_15\\Project2_Group_15.csproj",
+      "projectUniqueName": "C:\\Users\\taylo\\Source\\Repos\\ADV_CSHARP_P2\\Project2_Group_15\\Project2_Group_15.csproj",
       "projectName": "Project2_Group_15",
-      "projectPath": "C:\\CPA3\\Level 5\\CSHARPADV_INFO5101\\ADV_CSHARP_P2\\Project2_Group_15\\Project2_Group_15.csproj",
-      "packagesPath": "C:\\Users\\flibb\\.nuget\\packages\\",
-      "outputPath": "C:\\CPA3\\Level 5\\CSHARPADV_INFO5101\\ADV_CSHARP_P2\\Project2_Group_15\\obj\\",
+      "projectPath": "C:\\Users\\taylo\\Source\\Repos\\ADV_CSHARP_P2\\Project2_Group_15\\Project2_Group_15.csproj",
+      "packagesPath": "C:\\Users\\taylo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\taylo\\Source\\Repos\\ADV_CSHARP_P2\\Project2_Group_15\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\flibb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\taylo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -34,6 +32,7 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Fanshawe_S_Five\\MyNuget": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -68,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

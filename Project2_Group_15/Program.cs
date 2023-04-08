@@ -59,12 +59,11 @@ namespace Project2_Group_15 {
             // main display is completed
             // generate and save an xml file in directory
 
-            using (XmlWriter writer = XmlWriter.Create(Console.Out)) {
+            using (XmlWriter writer = XmlWriter.Create("../../../Data/ExpressionResults.xml")) {
                 XMLExtension.WriteStartDocument(writer);
 
                 XMLExtension.WriteStartRootElement(writer, "root");
 
-                
                 for(int i = 0; i < firstList.Count; i++) {
                     XMLExtension.WriteStartElement(writer, "element");
                     XMLExtension.WriteAttribute(writer, "sno", i.ToString());
@@ -77,9 +76,10 @@ namespace Project2_Group_15 {
                     XMLExtension.WriteEndElement(writer);
                     i++;
                 }
-
                 XMLExtension.WriteEndRootElement(writer);
                 writer.WriteEndDocument();
+                writer.Flush();
+                writer.Close();
             }
         }
 

@@ -1,4 +1,8 @@
-﻿namespace Project2_Group_15 {
+﻿using System.Numerics;
+using System.Text.RegularExpressions;
+using System.Xml;
+
+namespace Project2_Group_15 {
     public class Program { 
         public static void Main(string[] args) {
 
@@ -42,7 +46,7 @@
 
             for (int i = 0; i < firstList.Count(); i++) {
 
-                string match = (compExp.Compare(Double.Parse(postfixResults[i]), Double.Parse(prefixResults[i])) == 0 ? "True" : "False"); 
+                string match = Match(postfixResults[i], prefixResults[i]);
 
                 Console.WriteLine("|{0, 5}|{1,21}|{2,19}|{3,19}|{4,11}|{5,11}|{6,6}|", 
                     i + 1, firstList[i], postfixList[i], prefixList[i],
@@ -50,6 +54,38 @@
             }
             Console.WriteLine("");
             Console.WriteLine("====================================================================================================");
+
+            Console.WriteLine("\n\n");
+            // main display is completed
+            // generate and save an xml file in directory
+
+            using (XmlWriter writer = XmlWriter.Create(Console.Out)) {
+                XMLExtension.WriteStartDocument(writer);
+
+                XMLExtension.WriteStartRootElement(writer, "root");
+
+                
+                for(int i = 0; i < firstList.Count; i++) {
+                    XMLExtension.WriteStartElement(writer, "element");
+                    XMLExtension.WriteAttribute(writer, "sno", i.ToString());
+                    XMLExtension.WriteAttribute(writer, "infix", firstList[i]);
+                    XMLExtension.WriteAttribute(writer, "prefix", prefixList[i]);
+                    XMLExtension.WriteAttribute(writer, "postfix", postfixList[i]);
+                    XMLExtension.WriteAttribute(writer, "evaluation", postfixResults[i]);
+                    string match = Match(postfixResults[i], prefixResults[i]);
+                    XMLExtension.WriteAttribute(writer, "comparison", match);
+                    XMLExtension.WriteEndElement(writer);
+                    i++;
+                }
+
+                XMLExtension.WriteEndRootElement(writer);
+                writer.WriteEndDocument();
+            }
+        }
+
+        public static string Match(string first, string second) {
+            CompareExpressions compExp = new();
+           return compExp.Compare(Double.Parse(first), Double.Parse(second)) == 0 ? "True" : "False";
         }
     }
 }

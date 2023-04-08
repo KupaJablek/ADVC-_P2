@@ -36,7 +36,7 @@ namespace Project2_Group_15 {
 
         public static void WriteAttribute(this XmlWriter writer, string attributeName, string attributeValue)
         {
-            writer.WriteAttributeString(attributeName, attributeValue);
+            writer.WriteElementString(attributeName, attributeValue);
         }
     }
 }

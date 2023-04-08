@@ -74,7 +74,6 @@ namespace Project2_Group_15 {
                     string match = Match(postfixResults[i], prefixResults[i]);
                     XMLExtension.WriteAttribute(writer, "comparison", match);
                     XMLExtension.WriteEndElement(writer);
-                    i++;
                 }
                 XMLExtension.WriteEndRootElement(writer);
                 writer.WriteEndDocument();

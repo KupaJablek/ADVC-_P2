@@ -66,7 +66,7 @@ namespace Project2_Group_15 {
 
                 for(int i = 0; i < firstList.Count; i++) {
                     XMLExtension.WriteStartElement(writer, "element");
-                    XMLExtension.WriteAttribute(writer, "sno", i.ToString());
+                    XMLExtension.WriteAttribute(writer, "sno", i.ToString() + 1.ToString());
                     XMLExtension.WriteAttribute(writer, "infix", firstList[i]);
                     XMLExtension.WriteAttribute(writer, "prefix", prefixList[i]);
                     XMLExtension.WriteAttribute(writer, "postfix", postfixList[i]);
